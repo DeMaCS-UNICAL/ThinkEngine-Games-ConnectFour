@@ -72,7 +72,7 @@ public class Grid : MonoBehaviour
         gcField = gc.GetField();
         if (gcField != null)
         {
-            Debug.Log("GCfield is NOT NULL");
+            //Debug.Log("GCfield is NOT NULL");
             for (int i = 0; i < numRows; i++)
             {
                 for (int j = 0; j < numColumns; j++)
@@ -81,20 +81,20 @@ public class Grid : MonoBehaviour
                 }
             }
         }
-        else
-            Debug.Log("gcField is NULL");
+        //else
+        //    Debug.Log("gcField is NULL");
     }
 
     void Awake()
     {
-        Debug.Log("Inizializzo la griglia");
+        //Debug.Log("Inizializzo la griglia");
         gc = GetComponent<GameController>();
         gcField = gc.GetField();
         numColumns = gc.numColumns;
         numRows = gc.numRows;
         progressiveNumber = gc.progressiveNumber;
-        Debug.Log("NUMRows = " + numRows);
-        Debug.Log("NUMCols = " + numColumns);
+        //Debug.Log("NUMRows = " + numRows);
+        //Debug.Log("NUMCols = " + numColumns);
         ground = new Cell[numColumns, numRows];
         for (int i = 0; i < numRows; i++)
         {

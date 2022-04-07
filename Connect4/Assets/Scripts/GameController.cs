@@ -60,6 +60,7 @@ namespace ConnectFour
         /// </summary>
         public Field field;
         public int progressiveNumber = 0;
+        public int pieceDrop = -1;
 
         bool isLoading = true;
         bool isDropping = false;
@@ -430,9 +431,9 @@ namespace ConnectFour
                 if(!field.IsPlayersTurn)
                 {
                     progressiveNumber += 1;
-                    Debug.Log("[Avversario] riga: " + y + " col: " + x);
+                    //Debug.Log("[Avversario] riga: " + y + " col: " + x);
                 }
-                else Debug.Log("[Mio] riga: " + y + " col: " + x);
+                //else Debug.Log("[Mio] riga: " + y + " col: " + x);
 
                 endPosition = new Vector3(x, y * -1, startPosition.z);
 
